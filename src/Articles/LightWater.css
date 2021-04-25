@@ -1,0 +1,98 @@
+.water {
+    float: left;
+    height: 380px;
+    width: 100%;
+    margin: 0px 20px 20px 0;
+    background: linear-gradient(#06C, #013);
+    border: 1px solid #FFF;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.light {
+    position: absolute;
+    float: left;
+    margin-top: -50%;
+    height: 150%;
+    width: 50%;
+    background: radial-gradient(ellipse 40% 100% at 50% 0%, #FFFA, #FFF6, #FFF3, #FFF2, #FFF0);
+    mix-blend-mode: overlay;
+
+    animation: lightMove 10s infinite alternate,
+        lightRotation ease-in-out 1s infinite,
+        lightAppear ease-in 10s;
+}
+
+.light.l1 {
+    animation-duration: 10s;
+}
+
+.light.l2 {
+    animation-duration: 13s;
+}
+
+.light.l3 {
+    animation-duration: 17s;
+}
+
+.light.l4 {
+    animation-duration: 19s;
+}
+
+.light.l5 {
+    animation-duration: 21s;
+}
+
+.light.l6 {
+    animation-duration: 23s;
+}
+
+.light.l7 {
+    animation-duration: 27s;
+}
+
+.light.l8 {
+    animation-duration: 29s;
+}
+
+@keyframes lightMove {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes lightRotation {
+
+    0%,
+    50%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes lightAppear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,148 @@
+/*experiences*/
+.pdfCVLink img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+#exp {
+  padding: 20px 20px;
+}
+
+#exp .innerWrapper {
+  position: relative;
+  margin: 0 -10px;
+}
+
+#exp div.experience {
+  float: left;
+  width: calc(780px/4);
+  height: calc(780px/4);
+  box-sizing: border-box;
+  border: 10px solid transparent;
+  cursor: pointer;
+  
+  transition: all 0.2s;
+}
+
+#exp div.experience:hover {
+  border-width: 0px;
+}
+
+#exp div.experience .expLogo {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.experienceInner {
+  display: none;
+}
+
+.experienceInner .expDesc .tasks {
+  font-weight: bold;
+}
+
+#expViewer {
+  opacity: 0;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FFF;
+  background-color: #F0F0F0;
+  background-position: top left;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  height: 0%;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+#expViewer.opened {
+  height: 100%;
+  opacity: 1;
+}
+
+#expViewer .closeViewer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-family: verdana;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#expViewer .expLogo {
+  width: 200px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  float:left;
+}
+
+#expViewer .experienceInner {
+  display: block;
+  float:left;
+  width:550px;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #555;
+}
+
+#expViewer .expTitle {
+  font-family: 'Teko';
+  font-size: 30px;
+  color: #333;
+}
+
+#expViewer .date {
+  font-size: 20px;
+  font-family: 'Teko';
+}
+
+#expViewer ul {
+  padding-inline-start: 10px;
+  list-style: "- ";
+}
+
+#expViewer .expTags {
+  padding-top: 10px;
+}
+
+#expViewer .tag {
+  padding: 5px;
+  float: left;
+  color: #FFF;
+  background-color: #333;
+  border-radius: 5px;
+  margin: 5px 5px 0 0;
+}
+
+@media only screen and (max-device-width: 800px) {  
+  #exp div.experience {
+      width:50%;
+  }
+  
+  #expViewer .expLogo {
+      background-position: top;
+      width: 20%;        
+  }
+  
+  #expViewer .experienceInner {
+      width: 80%;
+      font-size: 14px;
+  }
+  
+  #expViewer .expTitle {
+      font-size: 40px;
+  }
+}

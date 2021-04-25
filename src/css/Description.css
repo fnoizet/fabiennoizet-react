@@ -1,0 +1,55 @@
+/*home*/
+.home {
+  color: #000;
+  padding: 20px;
+}
+
+.selfDesc {
+  height: 250px;
+}
+
+.selfDesc .photoHome {
+  /*background-image: url(../../public/img/photo_fabien_noizet.png);*/
+  background-image: url(../img/photo_fabien_noizet.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 250px;
+  float: left;
+}
+
+.selfDesc .descTags {
+  font-family: 'Teko';
+  font-size: 35px;
+  line-height: 35px;
+  box-sizing: border-box;
+  padding: 118px 20px 0 20px;
+  float: left;
+  width: 230px;
+}
+
+.selfDesc .descText {
+  float: left;
+  width: 280px;
+  height: 100%;
+  text-align: justify;
+  font-size: 14px;
+  border-bottom: 5px solid #08F;
+}
+
+@media only screen and (max-device-width: 800px) {
+  .selfDesc .photoHome,
+  .selfDesc .descTags {
+      width: 50%;        
+  }
+  
+  .selfDesc .descTags {
+      padding-top: 5px;
+  }
+  
+  .selfDesc .descText {
+      width: 100%;
+      padding: 20px 0;
+      height: auto;
+  }
+}
